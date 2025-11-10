@@ -1,0 +1,39 @@
+/* ÚVODNÍ STRÁNKA - HERO SECTION */
+@media (min-width: 768px) {
+  .hero-wrapper {
+    width: 70%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-wrapper {
+    width: 50%;
+  }
+}
+
+/*ÚVODNÍ STRÁNKA - GALLERY SECTION - IMAGES*/
+@media (min-width: 768px) {
+  .gallery-images img {
+    width: auto;
+  }
+}
+
+/* ÚVODNÍ STRÁNKA - FOOTER */
+@media (min-width: 768px) {
+  .footer-links {
+    column-count: 3;
+    font-size: var(--font-footer);
+  }
+  /* 
+  .footer-wrapper {
+    width: 90%;
+    align-items: center;
+  } */
+}
+
+@media (min-width: 1024px) {
+  .footer-links {
+    column-count: 4;
+    font-size: var(--font-footer);
+  }
+}

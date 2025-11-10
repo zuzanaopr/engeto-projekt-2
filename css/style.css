@@ -1,0 +1,414 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Premenné*/
+:root {
+  /* Farby */
+  --background-color: #000000;
+  --red: rgb(214, 28, 28);
+  --white: #ffffff;
+  --green: #00ff00;
+
+  /* Veľkosti písma (mobile → desktop) */
+  --font-h1: clamp(22px, 4vw, 36px);
+  --font-h3: clamp(18px, 2.5vw, 22px);
+  --font-p: clamp(14px, 1.8vw, 16px);
+  --font-button: clamp(14px, 1.8vw, 16px);
+  --font-input: clamp(10px, 1.8vw, 12px);
+  --font-footer: clamp(10px, 1.2vw, 12px);
+}
+
+/* Nastavenie pre celé telo stránky */
+body {
+  font-family: "Playfair Display", sans-serif, serif;
+}
+
+/* Nadpisy */
+h1 {
+  font-size: var(--font-h1);
+}
+
+h3 {
+  font-size: var(--font-h3);
+}
+
+/* Odstavec */
+p {
+  font-size: var(--font-p);
+  line-height: 1.6;
+}
+
+/* Button */
+button {
+  font-size: var(--font-button);
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/* Input */
+input {
+  font-size: var(--font-input);
+}
+
+/* Footer */
+footer,
+.footer a {
+  font-size: var(--font-footer);
+  font-family: inherit;
+}
+
+/* HLAVNÍ STRÁNKA */
+
+/* HEADER */
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: var(--background-color);
+}
+
+.logo img {
+  width: 100px;
+}
+
+.register-link a {
+  text-decoration: none;
+  color: var(--white);
+  background-color: var(--red);
+  padding: 2px 10px;
+  font-size: var(--font-button);
+}
+
+.register-link:hover {
+  opacity: 0.8;
+  transition: 0.3 ease;
+}
+
+/* SCROLL TOP BUTTON */
+#scrollTopBtn {
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  width: 100px;
+  height: 100px;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s ease;
+  z-index: 1000;
+  border: none;
+}
+
+#scrollTopBtn.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#scrollTopBtn:hover {
+  background: transparent;
+  transform: scale(1.1);
+}
+
+#scrollTopBtn img {
+  width: 50px;
+  height: 50px;
+}
+
+/* HERO SECTION */
+.hero-container {
+  background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 2),
+      rgba(0, 0, 0, 0.8)
+    ),
+    url(../images/background.jpg);
+  background-color: var(--background-color);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--white);
+}
+
+.hero-wrapper {
+  height: calc(100vh - 53px);
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.hero-email {
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+  gap: 10px;
+}
+
+.hero-email input {
+  color: var(--white);
+  background-color: var(--background-color);
+  border-color: var(--white);
+  width: 100%;
+  padding: 5px;
+}
+
+.hero-email button {
+  background-color: var(--red);
+  color: var(--white);
+  padding: 5px;
+  border: none;
+}
+
+.hero-email button:hover {
+  opacity: 0.8;
+  transition: 0.3 ease;
+}
+
+/* GALLERY SECTION */
+
+.gallery-container {
+  color: var(--white);
+}
+
+.gallery-wrapper {
+  background-color: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 100px 0;
+  margin: 0 auto;
+}
+
+.gallery-images img {
+  max-height: 300px;
+  width: auto;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3 ease;
+  cursor: pointer;
+}
+
+.gallery-link {
+  padding: 5px 10px;
+}
+
+.gallery-images img:hover {
+  transform: scale(1.05);
+}
+
+.gallery-link a {
+  text-decoration: none;
+  color: var(--white);
+  background-color: var(--red);
+  padding: 2px 10px;
+  margin: 20px;
+  font-size: var(--font-button);
+}
+
+.gallery-link a:hover {
+  opacity: 0.8;
+  transition: 0.3 ease;
+}
+
+/* FOOTER */
+
+.footer-container {
+  background-color: var(--background-color);
+  padding: 50px 20px;
+}
+
+.footer-wrapper {
+  background-color: var(--background-color);
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.footer-links {
+  column-count: 2;
+  column-gap: 20px;
+  text-align: left;
+  line-height: 25px;
+}
+
+.footer-links a {
+  width: 90%;
+  display: block;
+  color: var(--white);
+  opacity: 0.5;
+}
+
+/* DRUHÁ STRÁNKA - REGISTRATION */
+
+.registration-wrapper {
+  width: 100%;
+  padding: 20px;
+  height: calc(100vh - 53px);
+  background-color: var(--background-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.registration {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  max-width: 420px;
+}
+
+.registration input {
+  color: var(--white);
+  background-color: var(--background-color);
+  border: 2px solid var(--white);
+  width: 100%;
+  padding: 16px;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.registration-btn:hover {
+  opacity: 0.8;
+  transition: 0.3 ease;
+}
+
+.password-wrong {
+  border-color: var(--red) !important;
+}
+
+.password-correct {
+  border-color: var(--green) !important;
+}
+
+.registration-btn {
+  background-color: var(--red);
+  color: var(--white);
+  padding: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+/* TRETIA STRANA - API */
+
+/* HEADER */
+.mainWeb-link {
+  display: flex;
+  justify-content: center;
+  background-color: var(--background-color);
+}
+
+.mainWeb-link a {
+  display: flex;
+  text-align: center;
+  text-decoration: none;
+  color: var(--white);
+  background-color: var(--red);
+  padding: 2px 10px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.mainWeb-link a:hover {
+  opacity: 0.8;
+  transition: 0.3 ease;
+}
+
+/* OPTIONS */
+.mainWeb-link {
+  padding: 5px 10px;
+}
+
+.films-wrapper {
+  background-color: var(--background-color);
+  height: 100vh;
+}
+
+.select-wrapper {
+  display: flex;
+  justify-content: center;
+  background-color: var(--background-color);
+}
+
+.select-wrapper select {
+  color: var(--white);
+  background-color: var(--background-color);
+  border: 2px solid var(--red);
+  outline: none;
+  padding: 5px;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.select-wrapper select:hover {
+  opacity: 0.8;
+  transition: 0.3 ease;
+}
+
+.films {
+  background-color: var(--background-color);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  gap: 20px;
+}
+
+.show {
+  flex: 0 0 auto;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transform: rotate(4deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.show:hover {
+  transform: rotate(0deg);
+  z-index: 10;
+}
+
+.show img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+}

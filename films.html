@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/query.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Single+Day&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Films</title>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header>
+      <div class="mainWeb-link">
+        <a href="index.html">Úvodní strana</a>
+      </div>
+    </header>
+
+    <!-- SCROLL TO TOP BUTTON -->
+    <button id="scrollTopBtn">
+      <img src="images/circle-up-regular-full.svg" alt="Back to top" />
+    </button>
+
+    <!-- POLÍČKO NA VYBER -->
+    <div class="films-wrapper">
+      <div class="select-wrapper">
+        <select id="chooseFilm">
+          <option value="" disabled selected>Vyberte možnosti</option>
+          <option value="girl">Girl</option>
+          <option value="boy">Boy</option>
+          <option value="avengers">Avengers</option>
+          <option value="horror">Horror</option>
+        </select>
+      </div>
+
+      <!-- FILMY -->
+      <section class="films" id="results"></section>
+      <script src="js/script.js" defer></script>
+    </div>
+  </body>
+</html>
